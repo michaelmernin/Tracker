@@ -1,0 +1,33 @@
+<html>
+<body>
+logs and notes for {{month}} {{day}}
+    <form action="/logout" method="post">
+    <button type="text" action="submit">Save & Logout</button></form><br>
+Your personal entries:
+(1) Blood Sugar Level
+(2) Energy Level
+(3) Meal Eaten
+(4) Notes
+
+<form action="/data-entry" method="post">
+    <input type="text" placeholder="Blood Sugar Level" name="bloodData">
+    <input type="text" placeholder="Energy Level" name="energyData">
+    <input type="text" placeholder="Meal Eaten" name="mealData">
+    <input type="text" placeholder="Notes" name="notesData">
+    <button type="text" action="submit">Insert Data</button><br>
+</form>
+{{#Observations}}
+
+    Blood Sugar Level: {{ bloodSugarLevel }} <br>
+    Energy Level: {{energyLevel}} <br>
+    Meal Consumed: {{mealEaten}} <br>
+    Notes: {{notes}} <br>
+
+{{/Observations}}
+
+
+
+</form>
+
+</body>
+</html>
